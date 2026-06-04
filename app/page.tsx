@@ -3,7 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const heroStack = ["React", "Next.js", "Node.js", "NestJS", "PostgreSQL", "Docker"];
+const heroStack = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "NestJS",
+  "PostgreSQL",
+  "Docker",
+];
 
 const techStack = {
   Frontend: ["React", "Next.js", "TypeScript", "JavaScript"],
@@ -20,7 +27,14 @@ const projects = [
     subtitle: "Interactive Promotional Gaming Platform",
     description:
       "A collection of browser-based promotional games including a casino wheel, digital scratch card, mystery reward box and Irish bingo game. Developed with a strong focus on user engagement, gamification and responsive design.",
-    stack: ["JavaScript", "HTML5", "CSS3", "Canvas API", "Game Logic", "Responsive Design"],
+    stack: [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Canvas API",
+      "Game Logic",
+      "Responsive Design",
+    ],
     image: "/casino-project.png",
     liveUrl: "https://rafa90hernandez.github.io/rhdev-gaming-showcase/",
     githubUrl: "https://github.com/rafa90hernandez",
@@ -31,7 +45,15 @@ const projects = [
     subtitle: "Personal Finance Management Platform",
     description:
       "A modern financial management application designed to help users track income, expenses and savings through intuitive dashboards, visual reports and AI-assisted expense registration.",
-    stack: ["React Native", "Next.js", "NestJS", "PostgreSQL", "Docker", "AI Integration", "Fintech"],
+    stack: [
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "Docker",
+      "AI Integration",
+      "Fintech",
+    ],
     image: null,
     liveUrl: null,
     githubUrl: null,
@@ -42,7 +64,15 @@ const projects = [
     subtitle: "Digital Medical Identification Platform",
     description:
       "A healthcare-focused platform that allows emergency access to essential medical information through secure QR codes and PIN-protected records. Designed to improve access to critical patient information while maintaining privacy and security.",
-    stack: ["Next.js", "NestJS", "Prisma", "PostgreSQL", "Docker", "QR Code", "Healthcare"],
+    stack: [
+      "Next.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "QR Code",
+      "Healthcare",
+    ],
     image: null,
     liveUrl: null,
     githubUrl: null,
@@ -66,7 +96,7 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="mx-auto flex max-w-7xl items-center justify-between"
         >
-          <a href="#" className="flex items-center">
+          <a href="#" aria-label="Go to home" className="flex items-center">
             <Image
               src="/logo-rhdev.png"
               alt="RHDEV Logo"
@@ -78,16 +108,31 @@ export default function Home() {
           </a>
 
           <div className="hidden gap-8 text-sm text-zinc-300 md:flex">
-            <a href="#about" className="transition hover:text-[#39FF14]">About</a>
-            <a href="#education" className="transition hover:text-[#39FF14]">Education</a>
-            <a href="#experience" className="transition hover:text-[#39FF14]">Experience</a>
-            <a href="#projects" className="transition hover:text-[#39FF14]">Projects</a>
-            <a href="#contact" className="transition hover:text-[#39FF14]">Contact</a>
+            <a href="#about" className="transition hover:text-[#39FF14]">
+              About
+            </a>
+            <a href="#education" className="transition hover:text-[#39FF14]">
+              Education
+            </a>
+            <a href="#experience" className="transition hover:text-[#39FF14]">
+              Experience
+            </a>
+            <a href="#projects" className="transition hover:text-[#39FF14]">
+              Projects
+            </a>
+            <a href="#contact" className="transition hover:text-[#39FF14]">
+              Contact
+            </a>
           </div>
         </motion.nav>
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 pt-16 lg:grid-cols-2 lg:pt-24">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.8 }}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.8 }}
+          >
             <p className="mb-4 font-mono text-sm font-semibold text-[#39FF14]">
               &lt; FULLSTACK DEVELOPER /&gt;
             </p>
@@ -97,7 +142,8 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-xl leading-9 text-zinc-300">
-              Building modern digital products with React, Next.js, NestJS and PostgreSQL.
+              Building modern digital products with React, Next.js, NestJS and
+              PostgreSQL.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -115,11 +161,17 @@ export default function Home() {
             </div>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#projects" className="rounded-full bg-[#39FF14] px-8 py-4 text-center font-bold text-[#050816] transition hover:scale-105">
+              <a
+                href="#projects"
+                className="rounded-full bg-[#39FF14] px-8 py-4 text-center font-bold text-[#050816] transition hover:scale-105"
+              >
                 View My Work
               </a>
 
-              <a href="#contact" className="rounded-full border border-[#39FF14]/50 px-8 py-4 text-center font-bold text-[#39FF14] transition hover:bg-[#39FF14]/10">
+              <a
+                href="#contact"
+                className="rounded-full border border-[#39FF14]/50 px-8 py-4 text-center font-bold text-[#39FF14] transition hover:bg-[#39FF14]/10"
+              >
                 Get In Touch
               </a>
             </div>
@@ -138,7 +190,7 @@ export default function Home() {
             </div>
 
             <pre className="overflow-x-auto font-mono text-sm leading-7 text-zinc-300">
-{`const developer = {
+              {`const developer = {
   name: "Rafael Hernandez",
   brand: "RHDEV",
   role: "Fullstack Developer",
@@ -188,18 +240,29 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-zinc-300">
-              For more than <span className="font-bold text-[#39FF14]">17 years</span>, I managed and grew a family-owned fruit trading business, developing strong leadership, communication, problem-solving and decision-making skills.
+              For more than{" "}
+              <span className="font-bold text-[#39FF14]">17 years</span>, I
+              managed and grew a family-owned fruit trading business, developing
+              strong leadership, communication, problem-solving and
+              decision-making skills.
             </p>
 
             <p className="mt-6 text-lg leading-8 text-zinc-300">
-              Driven by a passion for technology and innovation, I transitioned into software development and am now focused on building modern web applications using React, Next.js, Node.js, NestJS, PostgreSQL and Docker.
+              Driven by a passion for technology and innovation, I transitioned
+              into software development and am now focused on building modern
+              web applications using React, Next.js, Node.js, NestJS,
+              PostgreSQL and Docker.
             </p>
 
             <p className="mt-6 text-lg leading-8 text-zinc-300">
-              Currently based in <span className="font-bold text-[#39FF14]">Ireland</span>, I combine entrepreneurial experience with technical expertise to create scalable digital solutions and deliver real business value through technology.
+              Currently based in{" "}
+              <span className="font-bold text-[#39FF14]">Ireland</span>, I
+              combine entrepreneurial experience with technical expertise to
+              create scalable digital solutions and deliver real business value
+              through technology.
             </p>
 
-            <div className="mt-8 grid grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <p className="text-3xl font-black text-[#39FF14]">17+</p>
                 <p className="mt-1 text-sm text-zinc-400">Years in Business</p>
@@ -212,7 +275,9 @@ export default function Home() {
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <p className="text-3xl font-black text-[#39FF14]">6+</p>
-                <p className="mt-1 text-sm text-zinc-400">Core Technologies</p>
+                <p className="mt-1 text-sm text-zinc-400">
+                  Core Technologies
+                </p>
               </div>
             </div>
           </div>
@@ -252,48 +317,70 @@ export default function Home() {
         transition={{ duration: 0.7 }}
         className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20"
       >
-        <h2 className="text-3xl font-black md:text-4xl">Professional Experience</h2>
+        <h2 className="text-3xl font-black md:text-4xl">
+          Professional Experience
+        </h2>
 
         <div className="mt-12 border-l-2 border-[#39FF14]/30">
           <div className="relative mb-12 pl-8">
             <div className="absolute left-0 top-1 h-4 w-4 -translate-x-1/2 rounded-full bg-[#39FF14]" />
 
-            <p className="text-sm font-semibold text-[#39FF14]">2008 – 2025</p>
+            <p className="text-sm font-semibold text-[#39FF14]">
+              2008 – 2025
+            </p>
 
             <h3 className="mt-2 text-2xl font-bold">Business Owner</h3>
 
-            <p className="font-medium text-zinc-300">Hernandez Fruit Trading</p>
+            <p className="font-medium text-zinc-300">
+              Hernandez Fruit Trading
+            </p>
 
             <p className="mt-4 max-w-3xl leading-8 text-zinc-400">
-              17+ years of experience managing business operations, logistics, customer relationships, financial planning and business growth for a family-owned fruit trading company. Developed strong leadership, communication, decision-making and problem-solving skills through real-world entrepreneurial experience.
+              17+ years of experience managing business operations, logistics,
+              customer relationships, financial planning and business growth for
+              a family-owned fruit trading company. Developed strong leadership,
+              communication, decision-making and problem-solving skills through
+              real-world entrepreneurial experience.
             </p>
           </div>
 
           <div className="relative mb-12 pl-8">
             <div className="absolute left-0 top-2 h-6 w-6 -translate-x-1/2 rounded-full bg-[#39FF14] shadow-[0_0_30px_rgba(57,255,20,1)]" />
 
-            <p className="text-sm font-semibold text-[#39FF14]">2024 – Present</p>
+            <p className="text-sm font-semibold text-[#39FF14]">
+              2024 – Present
+            </p>
 
-            <h3 className="mt-2 text-3xl font-black text-white">Fullstack Developer</h3>
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Fullstack Developer
+            </h3>
 
             <p className="text-lg font-semibold text-[#39FF14]">
               Personal & Independent Projects
             </p>
 
             <p className="mt-4 max-w-3xl leading-8 text-zinc-300">
-              Developing modern web applications and digital products using React, Next.js, Node.js, NestJS, PostgreSQL and Docker. Focused on scalable architectures, responsive interfaces and high-performance user experiences.
+              Developing modern web applications and digital products using
+              React, Next.js, Node.js, NestJS, PostgreSQL and Docker. Focused on
+              scalable architectures, responsive interfaces and high-performance
+              user experiences.
             </p>
           </div>
 
           <div className="relative pl-8">
             <div className="absolute left-0 top-1 h-4 w-4 -translate-x-1/2 rounded-full bg-[#39FF14]" />
 
-            <p className="text-sm font-semibold text-[#39FF14]">Global Experience</p>
+            <p className="text-sm font-semibold text-[#39FF14]">
+              Global Experience
+            </p>
 
             <h3 className="mt-2 text-2xl font-bold">Brazil • Ireland</h3>
 
             <p className="mt-4 max-w-3xl leading-8 text-zinc-400">
-              International experience gained through education, cultural immersion and professional development. This journey has strengthened my adaptability, communication skills and ability to thrive in multicultural environments.
+              International experience gained through education, cultural
+              immersion and professional development. This journey has
+              strengthened my adaptability, communication skills and ability to
+              thrive in multicultural environments.
             </p>
           </div>
         </div>
@@ -312,11 +399,16 @@ export default function Home() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-[#39FF14]/40"
             >
-              <h3 className="mb-4 text-xl font-bold text-[#39FF14]">{category}</h3>
+              <h3 className="mb-4 text-xl font-bold text-[#39FF14]">
+                {category}
+              </h3>
 
               <div className="flex flex-wrap gap-3">
                 {items.map((item) => (
-                  <span key={item} className="rounded-full border border-[#39FF14]/30 px-4 py-2 text-sm text-zinc-200">
+                  <span
+                    key={item}
+                    className="rounded-full border border-[#39FF14]/30 px-4 py-2 text-sm text-zinc-200"
+                  >
                     {item}
                   </span>
                 ))}
@@ -326,8 +418,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20">
-        <h2 className="text-3xl font-black md:text-4xl">Projects & Products</h2>
+      <section
+        id="projects"
+        className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20"
+      >
+        <h2 className="text-3xl font-black md:text-4xl">
+          Projects & Products
+        </h2>
 
         <div className="mt-8 grid gap-8">
           {projects.map((project) => (
@@ -372,7 +469,10 @@ export default function Home() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   {project.stack.map((item) => (
-                    <span key={item} className="rounded-full bg-[#39FF14]/10 px-4 py-2 text-sm text-[#39FF14]">
+                    <span
+                      key={item}
+                      className="rounded-full bg-[#39FF14]/10 px-4 py-2 text-sm text-[#39FF14]"
+                    >
                       {item}
                     </span>
                   ))}
@@ -380,7 +480,12 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   {project.liveUrl ? (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#39FF14] px-6 py-3 text-center font-bold text-[#050816]">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-[#39FF14] px-6 py-3 text-center font-bold text-[#050816]"
+                    >
                       Live Demo
                     </a>
                   ) : (
@@ -390,7 +495,12 @@ export default function Home() {
                   )}
 
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-6 py-3 text-center font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/20 px-6 py-3 text-center font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]"
+                    >
                       GitHub
                     </a>
                   )}
@@ -401,7 +511,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20">
+      <section
+        id="contact"
+        className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20"
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -409,27 +522,95 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="rounded-3xl border border-[#39FF14]/20 bg-[#39FF14]/5 p-8 text-center md:p-12"
         >
-          <p className="font-mono text-sm text-[#39FF14]">&lt; CONTACT /&gt;</p>
+          <p className="font-mono text-sm text-[#39FF14]">
+            &lt; CONTACT /&gt;
+          </p>
 
           <h2 className="mt-4 text-3xl font-black md:text-5xl">
             Let&apos;s Build Something Great Together
           </h2>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:rafaelhernandez.199025@gmail.com" className="rounded-full bg-[#39FF14] px-8 py-4 font-bold text-[#050816]">
+            <a
+              href="mailto:rafaelhernandez.199025@gmail.com"
+              className="rounded-full bg-[#39FF14] px-8 py-4 font-bold text-[#050816]"
+            >
               Email Me
             </a>
 
-            <a href="https://www.linkedin.com/in/rafaelhernandez-dev" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-8 py-4 font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]">
+            <a
+              href="https://www.linkedin.com/in/rafaelhernandez-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/20 px-8 py-4 font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]"
+            >
               LinkedIn
             </a>
 
-            <a href="https://github.com/rafa90hernandez" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-8 py-4 font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]">
+            <a
+              href="https://github.com/rafa90hernandez"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/20 px-8 py-4 font-bold text-white hover:border-[#39FF14] hover:text-[#39FF14]"
+            >
               GitHub
             </a>
           </div>
         </motion.div>
       </section>
+      <footer className="border-t border-white/10 px-6 py-10 md:px-12 lg:px-20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <a
+              href="#"
+              aria-label="Go to home"
+              className="text-2xl font-black tracking-[0.25em]"
+            >
+              RH<span className="text-[#39FF14]">DEV</span>
+            </a>
+
+            <p className="mt-3 max-w-md text-sm leading-6 text-zinc-400">
+              Fullstack Developer building modern digital products with a
+              business mindset.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-6 text-sm text-zinc-400">
+            <a href="#about" className="transition hover:text-[#39FF14]">
+              About
+            </a>
+
+            <a href="#education" className="transition hover:text-[#39FF14]">
+              Education
+            </a>
+
+            <a href="#experience" className="transition hover:text-[#39FF14]">
+              Experience
+            </a>
+
+            <a href="#projects" className="transition hover:text-[#39FF14]">
+              Projects
+            </a>
+
+            <a href="#contact" className="transition hover:text-[#39FF14]">
+              Contact
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
+          <p>
+            © {new Date().getFullYear()} RHDEV. All rights reserved.
+          </p>
+
+          <p>
+            Website developed by{" "}
+            <span className="font-semibold text-[#39FF14]">
+              Rafael Hernandez
+            </span>
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }

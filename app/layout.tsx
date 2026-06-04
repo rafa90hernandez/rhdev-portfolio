@@ -14,9 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rafaelhernandez.com.br"),
+
   title: "Rafael Hernandez | Fullstack Developer | React, Next.js, Node.js",
   description:
-    "Rafael Hernandez is a Fullstack Developer focused on building modern, scalable and high-performance web applications with React, Next.js, Node.js, NestJS, PostgreSQL and Docker.",
+    "Rafael Hernandez is a Fullstack Developer based in Ireland, focused on building modern, scalable and high-performance web applications with React, Next.js, Node.js, NestJS, PostgreSQL and Docker.",
+
   keywords: [
     "Rafael Hernandez",
     "RHDEV",
@@ -27,14 +29,26 @@ export const metadata: Metadata = {
     "NestJS",
     "PostgreSQL",
     "Docker",
-    "Web Developer",
+    "Web Developer Ireland",
+    "Fullstack Developer Ireland",
   ],
+
   authors: [{ name: "Rafael Hernandez" }],
   creator: "Rafael Hernandez",
+
+  alternates: {
+    canonical: "https://rafaelhernandez.com.br",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
     title: "Rafael Hernandez | Fullstack Developer",
     description:
-      "Fullstack Developer building modern digital products with React, Next.js, Node.js, NestJS, PostgreSQL and Docker.",
+      "Fullstack Developer based in Ireland, building modern digital products with React, Next.js, Node.js, NestJS, PostgreSQL and Docker.",
     url: "https://rafaelhernandez.com.br",
     siteName: "RHDEV",
     images: [
@@ -48,6 +62,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Rafael Hernandez | Fullstack Developer",
+    description:
+      "Fullstack Developer based in Ireland, building modern digital products with React, Next.js, Node.js, NestJS, PostgreSQL and Docker.",
+    images: ["/logo-rhdev.png"],
+  },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
