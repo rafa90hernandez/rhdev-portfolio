@@ -3,14 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const heroStack = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "NestJS",
-  "PostgreSQL",
-  "Docker",
-];
+const heroStack = ["React", "Next.js", "Node.js", "NestJS", "PostgreSQL", "Docker"];
 
 const techStack = {
   Frontend: ["React", "Next.js", "TypeScript", "JavaScript"],
@@ -175,14 +168,59 @@ export default function Home() {
         transition={{ duration: 0.7 }}
         className="mx-auto max-w-7xl px-6 py-24 md:px-12 lg:px-20"
       >
-        <h2 className="text-3xl font-black md:text-4xl">About Me</h2>
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, x: -35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex justify-center lg:justify-start"
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-[#39FF14]/20 bg-white/5 p-2 shadow-[0_0_50px_rgba(57,255,20,0.12)]">
+              <Image
+                src="/rafael-hernandez.jpeg"
+                alt="Rafael Hernandez"
+                width={500}
+                height={700}
+                className="h-auto w-full rounded-2xl object-cover"
+              />
+            </div>
+          </motion.div>
 
-        <p className="mt-6 max-w-4xl text-lg leading-8 text-zinc-300">
-          I am a Fullstack Developer with a background in business management
-          and entrepreneurship, focused on building scalable, modern and
-          high-performance web applications using technologies such as React,
-          Next.js, Node.js, NestJS, PostgreSQL and Docker.
-        </p>
+          <motion.div
+            initial={{ opacity: 0, x: 35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            <p className="mb-3 font-mono text-sm font-semibold text-[#39FF14]">
+              &lt; ABOUT ME /&gt;
+            </p>
+
+            <h2 className="text-4xl font-black md:text-5xl">
+              Entrepreneur turned Fullstack Developer
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-zinc-300">
+              For more than 17 years, I managed and grew a family-owned fruit
+              trading business, developing strong leadership, communication,
+              problem-solving and decision-making skills.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-zinc-300">
+              Driven by a passion for technology and innovation, I transitioned
+              into software development and am now focused on building modern
+              web applications using React, Next.js, Node.js, NestJS,
+              PostgreSQL and Docker.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-zinc-300">
+              Currently based in Ireland, I combine entrepreneurial experience
+              with technical expertise to create scalable digital solutions and
+              deliver real business value through technology.
+            </p>
+          </motion.div>
+        </div>
       </motion.section>
 
       <motion.section
