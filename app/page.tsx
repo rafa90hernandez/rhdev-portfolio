@@ -20,7 +20,69 @@ const techStack = {
   Additional: ["Python"],
 };
 
-const projects = [
+const products = [
+  {
+    title: "ClinID",
+    status: "Active Project",
+    subtitle: "Digital Medical Identification Platform",
+    description:
+      "A healthcare-focused platform that allows emergency access to essential medical information through secure QR codes and PIN-protected records. Designed to improve access to critical patient information while maintaining privacy and security.",
+    stack: [
+      "Next.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "QR Code",
+      "Healthcare",
+    ],
+    image: "/logoclinid.png",
+    liveUrl: "https://clinid.vercel.app/login",
+    variant: "active",
+  },
+  {
+    title: "SaveMoney",
+    status: "In Development",
+    subtitle: "Personal Finance Management Platform",
+    description:
+      "A modern financial management application designed to help users track income, expenses and savings through intuitive dashboards, visual reports and AI-assisted expense registration.",
+    stack: [
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "Docker",
+      "AI Integration",
+      "Fintech",
+    ],
+    image: "/savemoney.png",
+    liveUrl: null,
+    variant: "development",
+  },
+];
+
+const webProjects = [
+  {
+    title: "Isabela Corrêa Psychology Platform",
+    status: "Live",
+    subtitle: "Professional Website for a Licensed Psychologist",
+    description:
+      "Designed and developed a modern, responsive website for a licensed psychologist, focused on creating a professional online presence, improving accessibility and delivering a seamless experience across desktop and mobile devices. The project also included SEO optimization, performance improvements and deployment to production.",
+    stack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "UI/UX",
+      "SEO",
+      "Git",
+      "GitHub",
+    ],
+    image: "/isabela-project.png",
+    liveUrl: "https://www.isabelacorreapsi.com.br/",
+    githubUrl:
+      "https://github.com/rafa90hernandez/site_psico_Isabela_Correa",
+  },
   {
     title: "Gaming & Interactive Rewards Platform",
     status: "Live",
@@ -38,44 +100,6 @@ const projects = [
     image: "/casino-project.png",
     liveUrl: "https://rafa90hernandez.github.io/rhdev-gaming-showcase/",
     githubUrl: "https://github.com/rafa90hernandez",
-  },
-  {
-    title: "SaveMoney",
-    status: "In Development",
-    subtitle: "Personal Finance Management Platform",
-    description:
-      "A modern financial management application designed to help users track income, expenses and savings through intuitive dashboards, visual reports and AI-assisted expense registration.",
-    stack: [
-      "React Native",
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Docker",
-      "AI Integration",
-      "Fintech",
-    ],
-    image: null,
-    liveUrl: null,
-    githubUrl: null,
-  },
-  {
-    title: "ClinID",
-    status: "In Development",
-    subtitle: "Digital Medical Identification Platform",
-    description:
-      "A healthcare-focused platform that allows emergency access to essential medical information through secure QR codes and PIN-protected records. Designed to improve access to critical patient information while maintaining privacy and security.",
-    stack: [
-      "Next.js",
-      "NestJS",
-      "Prisma",
-      "PostgreSQL",
-      "Docker",
-      "QR Code",
-      "Healthcare",
-    ],
-    image: null,
-    liveUrl: null,
-    githubUrl: null,
   },
 ];
 
@@ -219,10 +243,11 @@ export default function Home() {
           <div className="flex justify-center lg:justify-start">
             <div className="relative max-w-[430px] overflow-hidden rounded-3xl border border-[#39FF14]/20 bg-white/5 p-2 shadow-[0_0_50px_rgba(57,255,20,0.12)]">
               <Image
-                src="/rafael-hernandez.jpeg"
+                src="/rafael-hernandez-perfil.jpeg"
                 alt="Rafael Hernandez"
                 width={430}
                 height={600}
+                priority
                 className="h-auto w-full rounded-2xl object-cover"
               />
             </div>
@@ -426,75 +451,205 @@ export default function Home() {
           Projects & Products
         </h2>
 
-        <div className="mt-8 grid gap-8">
-          {projects.map((project) => (
-            <motion.article
-              key={project.title}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="overflow-hidden rounded-3xl border border-[#39FF14]/20 bg-white/5 p-6 transition hover:border-[#39FF14]/50 md:p-8"
-            >
-              {project.image && (
-                <div className="overflow-hidden rounded-2xl border border-white/10">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={1200}
-                    height={700}
-                    className="w-full transition duration-500 hover:scale-105"
-                  />
-                </div>
-              )}
+        <div className="mt-12">
+          <p className="font-mono text-sm font-semibold text-[#39FF14]">
+            &lt; PRODUCTS /&gt;
+          </p>
 
-              <div className={project.image ? "mt-8" : ""}>
-                <div className="mb-3 flex flex-wrap items-center gap-3">
-                  <h3 className="text-2xl font-bold text-[#39FF14]">
-                    {project.title}
-                  </h3>
+          <h3 className="mt-2 text-2xl font-bold text-white md:text-3xl">
+            Products
+          </h3>
 
-                  <span className="rounded-full bg-[#39FF14]/10 px-3 py-1 text-xs font-semibold text-[#39FF14]">
-                    {project.status}
-                  </span>
-                </div>
+          <p className="mt-3 max-w-2xl text-zinc-400">
+            Fullstack products focused on real-world problem solving, backend
+            architecture, data modeling and scalable application design.
+          </p>
 
-                <p className="text-lg font-semibold text-white">
-                  {project.subtitle}
-                </p>
+          <div className="mt-8 grid gap-8">
+            {products.map((project) => (
+              <motion.article
+                key={project.title}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className={`relative overflow-hidden rounded-3xl border p-6 transition md:p-8 ${project.variant === "active"
+                  ? "border-cyan-400/30 bg-cyan-400/[0.04] shadow-[0_0_80px_rgba(34,211,238,0.08)] hover:border-cyan-300/60"
+                  : "border-amber-300/25 bg-amber-300/[0.03] shadow-[0_0_80px_rgba(251,191,36,0.06)] hover:border-amber-300/50"
+                  }`}
+              >
+                <div
+                  className={`absolute right-0 top-0 h-40 w-40 rounded-full blur-3xl ${project.variant === "active"
+                    ? "bg-cyan-400/10"
+                    : "bg-amber-300/10"
+                    }`}
+                />
 
-                <p className="mt-4 max-w-3xl leading-8 text-zinc-300">
-                  {project.description}
-                </p>
+                <div className="relative grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+                  <div>
+                    <div className="mb-4 flex flex-wrap items-center gap-3">
+                      <h3 className="text-3xl font-black text-white">
+                        {project.title}
+                      </h3>
 
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {project.stack.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-[#39FF14]/10 px-4 py-2 text-sm text-[#39FF14]"
+                      <span
+                        className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide ${project.variant === "active"
+                          ? "bg-cyan-400/10 text-cyan-300 ring-1 ring-cyan-300/30"
+                          : "bg-amber-300/10 text-amber-300 ring-1 ring-amber-300/30"
+                          }`}
+                      >
+                        {project.status}
+                      </span>
+                    </div>
+
+                    <p
+                      className={`text-lg font-bold ${project.variant === "active"
+                        ? "text-cyan-100"
+                        : "text-amber-100"
+                        }`}
                     >
-                      {item}
-                    </span>
-                  ))}
-                </div>
+                      {project.subtitle}
+                    </p>
 
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  {project.liveUrl ? (
+                    <p className="mt-4 max-w-3xl leading-8 text-zinc-300">
+                      {project.description}
+                    </p>
+
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      {project.stack.map((item) => (
+                        <span
+                          key={item}
+                          className={`rounded-full px-4 py-2 text-sm ${project.variant === "active"
+                            ? "bg-cyan-400/10 text-cyan-200"
+                            : "bg-amber-300/10 text-amber-200"
+                            }`}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-full bg-cyan-300 px-7 py-3 text-center font-black text-[#050816] shadow-[0_0_30px_rgba(34,211,238,0.22)] transition hover:scale-105 hover:bg-cyan-200"
+                        >
+                          Project
+                        </a>
+                      ) : (
+                        <span className="rounded-full bg-white/10 px-7 py-3 text-center font-bold text-zinc-300">
+                          In Development
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {project.image && (
+                    <div className="flex justify-center lg:justify-end">
+                      <div
+                        className={`relative flex min-h-[280px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-3xl border bg-white/[0.03] p-6 ${project.variant === "active"
+                          ? "border-cyan-300/20 shadow-[0_0_60px_rgba(34,211,238,0.10)]"
+                          : "border-amber-300/20 shadow-[0_0_60px_rgba(251,191,36,0.08)]"
+                          }`}
+                      >
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={520}
+                          height={520}
+                          className={`h-auto object-contain transition duration-500 hover:scale-105 ${project.title === "ClinID"
+                              ? "w-full max-w-[260px]"
+                              : "w-full max-w-[300px]"
+                            }`}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20">
+          <p className="font-mono text-sm font-semibold text-[#39FF14]">
+            &lt; WEB PROJECTS /&gt;
+          </p>
+
+          <h3 className="mt-2 text-2xl font-bold text-white md:text-3xl">
+            Web Projects
+          </h3>
+
+          <p className="mt-3 max-w-2xl text-zinc-400">
+            Published websites and interactive web experiences focused on
+            responsive design, user experience and production delivery.
+          </p>
+
+          <div className="mt-8 grid gap-8">
+            {webProjects.map((project) => (
+              <motion.article
+                key={project.title}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="overflow-hidden rounded-3xl border border-[#39FF14]/20 bg-white/5 p-6 transition hover:border-[#39FF14]/50 md:p-8"
+              >
+                {project.image && (
+                  <div className="overflow-hidden rounded-2xl border border-white/10">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={1200}
+                      height={700}
+                      className="w-full transition duration-500 hover:scale-105"
+                    />
+                  </div>
+                )}
+
+                <div className={project.image ? "mt-8" : ""}>
+                  <div className="mb-3 flex flex-wrap items-center gap-3">
+                    <h3 className="text-2xl font-bold text-[#39FF14]">
+                      {project.title}
+                    </h3>
+
+                    <span className="rounded-full bg-[#39FF14]/10 px-3 py-1 text-xs font-semibold text-[#39FF14]">
+                      {project.status}
+                    </span>
+                  </div>
+
+                  <p className="text-lg font-semibold text-white">
+                    {project.subtitle}
+                  </p>
+
+                  <p className="mt-4 max-w-3xl leading-8 text-zinc-300">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {project.stack.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full bg-[#39FF14]/10 px-4 py-2 text-sm text-[#39FF14]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full bg-[#39FF14] px-6 py-3 text-center font-bold text-[#050816]"
                     >
-                      Live Demo
+                      Platform
                     </a>
-                  ) : (
-                    <span className="rounded-full bg-white/10 px-6 py-3 text-center font-bold text-zinc-300">
-                      Coming Soon
-                    </span>
-                  )}
 
-                  {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -503,11 +658,11 @@ export default function Home() {
                     >
                       GitHub
                     </a>
-                  )}
+                  </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -558,6 +713,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
       <footer className="border-t border-white/10 px-6 py-10 md:px-12 lg:px-20">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
@@ -579,19 +735,15 @@ export default function Home() {
             <a href="#about" className="transition hover:text-[#39FF14]">
               About
             </a>
-
             <a href="#education" className="transition hover:text-[#39FF14]">
               Education
             </a>
-
             <a href="#experience" className="transition hover:text-[#39FF14]">
               Experience
             </a>
-
             <a href="#projects" className="transition hover:text-[#39FF14]">
               Projects
             </a>
-
             <a href="#contact" className="transition hover:text-[#39FF14]">
               Contact
             </a>
@@ -599,9 +751,7 @@ export default function Home() {
         </div>
 
         <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} RHDEV. All rights reserved.
-          </p>
+          <p>© {new Date().getFullYear()} RHDEV. All rights reserved.</p>
 
           <p>
             Website developed by{" "}
